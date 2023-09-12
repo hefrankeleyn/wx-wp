@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    Weixin
+    <view style="font-size: 17ppx;margin-top:20px">
+        这是一段文本<icon type="success" size="14px" color="green" />
+    </view>
+    <!-- <view class="sprite_icon"></view>
+    <view class="icon-close"></view>
+    <view class="icon-close"></view>
+    <icon class="iconfont icon-sun"></icon>
+    <icon type="success" size="30px" color="green" />
+    <icon type="success" size="100rpx"/>
+    <icon style="background:grey;" type="success" size="100rpx"/>
+    <icon class="svg-icon"></icon> -->
+    <!-- <icon class="svg-icon"></icon>  -->
+    <icon class="iconfont01 icon-head"></icon>
+    <icon class="iconfont01 icon-3dglass"></icon>
+  </view>
+</scroll-view>
