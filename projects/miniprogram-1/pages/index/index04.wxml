@@ -1,0 +1,19 @@
+<!-- index.wxml -->
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+    <!-- 第二部分，关于flex布局 -->
+    <view class="section__title">第二部分，关于flex布局</view>
+    <!-- 18 -->
+    <view class="section">
+        <view class="section__title">18 多行侧轴的对齐方式</view>
+        <view class="flex-wrp" style="flex-direction:row;justify-content:flex-start;align-items:baseline;flex-wrap:wrap;align-content:space-between;height:300px;">
+            <view class="flex-item bc_green">1</view>
+            <view class="flex-item bc_red">2</view>
+            <view style="height:auto;" class="flex-item bc_blue">3</view>
+            <view style="height:auto;" class="flex-item bc_blue">4</view>
+            <view style="height:auto;" class="flex-item bc_blue">5</view>
+            <view style="height:auto;" class="flex-item bc_blue">6</view>
+            <view style="height:auto;" class="flex-item bc_blue">7</view>
+        </view>
+    </view>
+</scroll-view>

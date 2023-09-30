@@ -1,0 +1,55 @@
+<!-- index.wxml -->
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+    <!-- 第二部分，关于flex布局 -->
+    <view class="section__title">第二部分，关于flex布局</view>
+    <!-- 10 -->
+    <view class="section">
+        <view class="section__title">10 align-items:stretch</view>
+        <view class="flex-wrp" style="flex-direction:row;justify-content:space-around;align-items:stretch;">
+            <view class="flex-item bc_green">1</view>
+            <view class="flex-item bc_red">2</view>
+            <view style="height:auto;" class="flex-i÷tem bc_blue">3</view>
+            <!-- <view class="flex-item bc_blue">3</view> -->
+        </view>
+    </view>
+    <!-- 11 -->
+    <view class="section">
+        <view class="section__title">11 align-items:flex-start</view>
+        <view class="flex-wrp" style="flex-direction:row;justify-content:space-around;align-items:flex-start;">
+            <view class="flex-item bc_green">1</view>
+            <view class="flex-item bc_red">2</view>
+            <view style="height:auto;" class="flex-item bc_blue">3</view>
+        </view>
+    </view>
+    <!-- 12 -->
+    <view class="section">
+        <view class="section__title">12 align-items:end</view>
+        <view class="flex-wrp" style="flex-direction:row;justify-content:space-around;align-items:flex-end;">
+            <view class="flex-item bc_green">1</view>
+            <view class="flex-item bc_red">2</view>
+            <!-- <view style="height:auto;" class="flex-item bc_blue">3</view> -->
+            <view style="height:auto;" class="flex-item bc_blue">3</view>
+        </view>
+    </view>
+    <!-- 13 -->
+    <view class="section">
+        <view class="section__title">12 align-items:center</view>
+        <view class="flex-wrp" style="flex-direction:row;justify-content:space-around;align-items:center;">
+            <view class="flex-item bc_green">1</view>
+            <view class="flex-item bc_red">2</view>
+            <view style="height:auto;" class="flex-item bc_blue">3</view>
+        </view>
+    </view>
+    <!-- 14 -->
+    <view class="section">
+        <view class="section__title">14 以子元素的第一行文字对齐</view>
+        <view class="flex-wrp" style="flex-direction:row;justify-content:space-around;align-items:baseline;">
+            <view class="flex-item bc_green">1</view>
+            <view style="padding-top:30px;" class="flex-item bc_red">2</view>
+            <view style="height:auto;line-height:150px;" class="flex-item bc_blue">
+                <text>3</text>
+            </view>
+        </view>
+    </view>
+</scroll-view>

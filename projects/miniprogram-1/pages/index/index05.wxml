@@ -1,0 +1,15 @@
+<!-- index.wxml -->
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+    <!-- 第二部分，关于flex布局 -->
+    <view class="section__title">第二部分，关于flex布局</view>
+    <!-- 21 -->
+    <view class="section">
+        <view class="section__title">21flex-direction: column,align-items:center</view>
+        <view class="flex-wrp" style="height: 300px;flex-direction:column;align-items:center;">
+            <view class="flex-item bc_green">1</view>
+            <view class="flex-item bc_red">2</view>
+            <view class="flex-item bc_blue">3</view>
+        </view>
+    </view>
+</scroll-view>
