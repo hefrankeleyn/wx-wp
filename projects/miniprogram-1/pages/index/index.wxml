@@ -1,21 +1,63 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    Weixin
-    <view style="font-size: 17ppx;margin-top:20px">
-        这是一段文本<icon type="success" size="14px" color="green" />
+    <!-- 2 示例 -->
+    <view class="section">
+        <view class="gap">2 示例</view>
+        <view hover-class="bc_red" class="section__title">content</view>
     </view>
-    <!-- <view class="sprite_icon"></view>
-    <view class="icon-close"></view>
-    <view class="icon-close"></view>
-    <icon class="iconfont icon-sun"></icon>
-    <icon type="success" size="30px" color="green" />
-    <icon type="success" size="100rpx"/>
-    <icon style="background:grey;" type="success" size="100rpx"/>
-    <icon class="svg-icon"></icon> -->
-    <!-- <icon class="svg-icon"></icon>  -->
-    <icon class="iconfont01 icon-head"></icon>
-    <icon class="iconfont01 icon-3dglass"></icon>
-  </view>
+    <!-- 3 -->
+    <view class="section">
+        <view class="gap">3 示例</view>
+        <!-- 阻止父节点出现hover状态 -->
+        <view hover-class="bc_red" class="section__title">
+            parent
+            <view hover-stop-propagation="{{false}}" hover-class="bc_green" class="section__title">
+                child view
+            </view>
+        </view>
+    </view>
+    <!-- 4 事件三阶段 -->
+    <view class="section">
+        <view class="gap">4 示例 事件三阶段</view>
+        <!-- 阻止父节点出现hover状态 -->
+        <view id="parentView" bindtap="onTap" hover-class="bc_red" class="section__title">
+            parent
+            <view id="childView" bindtap="onTap" hover-stop-propagation hover-class="bc_green" class="section__title">
+                child view
+            </view>
+        </view>
+    </view>
+    <!-- 5 子组件只输出一次 -->
+    <view class="section">
+        <view class="gap">5 示例</view>
+        <!-- 阻止父节点出现hover状态，阻止冒泡 -->
+        <view id="parentView" bindtap="onTap" hover-class="bc_red" class="section__title">
+            parent
+            <view id="childView" catchtap="onTap" hover-stop-propagation hover-class="bc_green" class="section__title">
+                child view
+            </view>
+        </view>
+    </view>
+    <!-- 8 -->
+    <view class="section">
+        <view class="gap">8 按钮示例</view>
+        <!-- 普通按钮 -->
+        <view class="section">
+            <button class="btn" type="primary">完成</button>
+        </view>
+        <!-- 圆形按钮 -->
+        <view class="section">
+            <button hover-class="circle-btn__hover_btn">
+                <icon type="success" size="80px"></icon>
+            </button>
+        </view>
+        <!-- 距形按钮 -->
+        <view class="section">
+            <button type="default" class="btn" plain hover-class="rect-btn__hover_btn">
+                <icon type="success_no_circle" size="26px"></icon>
+                完成
+            </button>
+        </view>
+    </view>
 </scroll-view>

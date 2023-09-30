@@ -1,2 +1,7 @@
 // index.js
-Page({})
+Page({
+// 片 4
+onTap(e){
+    console.log(e.target)
+  }
+})
