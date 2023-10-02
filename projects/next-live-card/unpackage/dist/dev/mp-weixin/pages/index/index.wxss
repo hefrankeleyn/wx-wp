@@ -7,6 +7,6 @@
 	/* upx 是一个响应式样式 */
 	width: 650rpx;
 	height: 360rpx;
-	background: url('http://itzixi.com:88/group1/M00/00/05/CpoxxFx6IbaAVgYMAAC3osiLBpo919.jpg');
+	background: url('https://img-blog.csdnimg.cn/a81d93360cad43db9c1b6fdc8cdf9290.png') repeat;
 }
 
