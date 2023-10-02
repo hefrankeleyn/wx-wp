@@ -1,27 +1,41 @@
 /**index.wxss**/
 
-/* 局中 */
-Page {
-    /* text-align: center; */
+.card {
+    /* 添加外边距 */
+    margin: 10px;
+    /* 位置的设置，需要硬记忆 */
+    position: relative;  /* 相对定位 */
 }
 
-image {
+.card image.bg {
     width: 100%;
+    /* 边框圆角（需要记忆，经验） */
+    border-radius: 5px;
+    /* 边框阴影（需要记忆，经验）， （x轴偏移量， y轴偏移量） */
+    box-shadow: 0 0 5px #5f678E;
 }
 
-.comment {
-    text-align: center;
-    font-size: 14px;
-    color: #999;
+.card image.logo {
+    width: 80px;
+    /* （需要记忆）绝对定位，不是孤立的，需要把父容器定义为相对定位。 */
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
-.body {
-    padding: 20px;
-    line-height: 2;
+.card .info {
+    /* （需要记忆）绝对定位，不是孤立的，需要把父容器定义为相对定位。 */
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    font-size: 16px;
+    color: #5f678E;
 }
-.title {
-    font-size: 24px;
+
+.card .info .name {
     font-weight: bold;
-    padding-top: 10px;
-    padding-bottom: 10px;
+}
+
+.card .info .desc {
+    margin-bottom: 10px;
 }

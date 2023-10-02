@@ -1,17 +1,10 @@
-<image src="../../img/card.jpg" mode="widthFix"/>
-<view class="comment">一张小山峰图片</view>
-<view class="body">
-<view class="title">简介</view>
-<view>有一天，我去了一座小山峰。我站在小山峰往远处看，我能看到层峦叠嶂的景象。还能看到一个山谷，山谷的下面是一个城市，那里树立着很多的高楼。</view>
-<view class="title">六个问题</view>
-<view>1. 你是谁？</view>
-<view>我叫Lf_Ren，来自河南南阳</view>
-<view>2. 你要和我说什么？</view>
-<view>我有一个梦想。我想变得有本事，我想让我的人生变得有价值，有意义。我期望我能让每天都过得有价值。我要学会体会生命的长度和宽度。</view>
-<view>3. 我为什么要相信你说的是真的？</view>
-<view>我会认真并坚持不懈的学习和实践。以此达到：静心、技能、经验、心性、运气</view>
-<view>4. 我为什么要向你购买？</view>
-<view>因为我在这里。</view>
-<view>5. 我为什么立刻向你购买？</view>
-<view>我在走上山的路，很快我们就要错过了。</view>
+<view class="card">
+  <image class="bg" src="../../img/001bg.png" mode="widthFix" />
+  <image class="logo" src="../../img/001logo.png" mode="widthFix" />
+  <view class="info">
+    <view class="name">李飞</view>
+    <view class="desc">认真且持之以恒的学习和实践</view>
+    <view>Lf_Ren</view>
+    <view>hefrankeleyn@gmail.com</view>
+  </view>
 </view>
