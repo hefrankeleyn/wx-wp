@@ -1,3 +1,10 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 /**index.wxss**/
 page {
   height: 100vh;
@@ -11,22 +18,43 @@ page {
 }
 
 
-.flex-wrp {
+
+/* movable-area {
+  border: 1px solid #ccc;
+  overflow: hidden;
+} */
+/* 禁用默认触摸事件处理 */
+/* movable-view {
+  touch-action: none; 
+} */
+
+
+movable-view {
   display: flex;
-}
-.bc_blue {
-  background: blue;
-  width: 100px;
-  height: 100px;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+  width: 100rpx;
+  background: #1AAD19;
+  color: #fff;
+  touch-action: none; 
 }
 
-.bc_red {
-  background: red;
-  width: 100px;
-  height: 120px;
+movable-area {
+  height: 400rpx;
+  width: 400rpx;
+  background-color: #ccc;
+  overflow: hidden;
 }
-.bc_green {
-  background: green;
-  width: 100px;
-  height: 140px;
+
+.max {
+  width: 600rpx;
+  height: 600rpx;
+  background-color: blue;
+}
+
+/* 左滑删除1 */
+.list_item {
+  display: flex;
+  border-bottom: 1px solid #DEDEDE;
 }

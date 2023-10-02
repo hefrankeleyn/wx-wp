@@ -1,0 +1,4 @@
+<view class="title">{{text}}!</view>
+<!-- <image class="img" src="../../img/11.png" mode="widthFix"/> -->
+<image class="img" src="../../img/card.jpg" mode="widthFix"/>
+<button bindtap="onClick">点击</button>

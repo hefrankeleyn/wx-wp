@@ -1,0 +1,32 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+
+.flex-wrp {
+  display: flex;
+}
+.bc_blue {
+  background: blue;
+  width: 100px;
+  height: 100px;
+}
+
+.bc_red {
+  background: red;
+  width: 100px;
+  height: 120px;
+}
+.bc_green {
+  background: green;
+  width: 100px;
+  height: 140px;
+}

@@ -1,0 +1,15 @@
+/**index.wxss**/
+
+/* 局中 */
+Page {
+    text-align: center;
+}
+
+.title {
+    /* color: red; */
+    color: #f00;
+}
+
+.img {
+    margin-top: 200rpx;
+}

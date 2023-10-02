@@ -1,14 +1,63 @@
 <!-- index.wxml -->
 <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
-    <!-- 第二部分，关于flex布局 -->
-    <view class="section__title">第二部分，关于flex布局</view>
-    <view class="section">
-        <!-- 生成分享图，将view转绘为图片 -->
-        <button type="primary" class="intro" open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:if="{{!nickName}}">
-            获取分享图头像昵称
-        </button>
-        <button type="primary" class="intro" bindtap="createShareImage" wx:else>点我生成分享图</button>
-        <share-box isCanDraw="{{isCanDraw}}" bind:initData="createShareImage" />
+  <!-- <movable-area style="width: 100%; height: 300px;">
+    <movable-view id="movableView" style="width: 50px; height: 50px; background-color: #ff0000;" direction="all">
+      这里放置拖拽的内容 
+    </movable-view>
+  </movable-area> -->
+  <view class="page-section">
+    <view class="page-section-title">movable-view = movable-area</view>
+    <movable-area>
+      <movable-view style="width:400rpx;height:400rpx;" direction="all">text</movable-view>
+    </movable-area>
+  </view>
+  <!-- 2 movable-view < movable-area -->
+  <view class="page-section">
+    <view class="page-section-title">movable-view 小于 movable-area</view>
+    <movable-area>
+      <movable-view direction="all">text</movable-view>
+    </movable-area>
+  </view>
+  <!-- 片5 3 movable-view > movable-area -->
+  <view class="page-section">
+    <view class="page-section-title">movable-view 大于 movable-area</view>
+    <movable-area>
+      <movable-view style="width:500rpx;height:500rpx;" class="max" direction="all">
+        text
+      </movable-view>
+    </movable-area>
+  </view>
+  <!-- 片6、7 实现动画 -->
+  <view class="page-section">
+    <view class="page-section-title">实现动画</view>
+    <movable-area>
+      <movable-view inertia damping="80" friction="1" bindchange="onMovableViewChange" animation x="{{x}}" y="{{y}}" direction="all">
+        text
+      </movable-view>
+    </movable-area>
+    <movable-area style="width:500rpx;height:500rpx;">
+      <movable-view bindchange="onMovableViewChange" class="max" direction="all">text</movable-view>
+    </movable-area>
+    <view class="btn-area">
+      <button data-kind="0" bindtap="tap" class="page-body-button" type="primary">
+        click me to move to (30px, 30px)
+      </button>
+      <button data-kind="1" bindtap="tap" class="page-body-button" type="primary">
+        click me to move to (0px, 0px)
+      </button>
     </view>
+  </view>
+  <view class="page-section-title">左侧删除1</view>
+  <view class="list_item">
+    <movable-area style="width:750rpx;height:100rpx;">
+      <movable-view style="width:1050rpx;height:100rpx;" direction="horizontal" class="max">
+        <view class="left">这里是插入到组内容1</view>
+        <view class="right">
+          <view class="read">已读</view>
+          <view class="delete">删除</view>
+        </view>
+      </movable-view>
+    </movable-area>
+  </view>
 </scroll-view>
