@@ -2,14 +2,26 @@
 
 /* 局中 */
 Page {
+    /* text-align: center; */
+}
+
+image {
+    width: 100%;
+}
+
+.comment {
     text-align: center;
+    font-size: 14px;
+    color: #999;
 }
 
+.body {
+    padding: 20px;
+    line-height: 2;
+}
 .title {
-    /* color: red; */
-    color: #f00;
-}
-
-.img {
-    margin-top: 200rpx;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
