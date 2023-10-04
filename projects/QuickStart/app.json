@@ -14,5 +14,14 @@
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+      "list":[
+          {"text": "Tab1","pagePath": "pages/index/index"},
+          {"text": "Tab2","pagePath": "pages/demo/demo"},
+          {"text": "Tab3","pagePath": "pages/logs/logs"},
+          {"text": "Tab4","pagePath": "pages/demojs/index"}
+
+      ]
+  }
 }

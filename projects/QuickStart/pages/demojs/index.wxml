@@ -1,4 +1,4 @@
 <button class="weui-btn weui-btn_primary" bindtap="helloMINA">HelloMINI</button>
 <button class="weui-btn weui-btn_primary"  bindtap="goodbyeMINA">GoodbyeMINI</button>
-
+<button class="weui-btn weui-btn_primary"  bindtap="switchPage">Switch Page</button>
 

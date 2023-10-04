@@ -9,5 +9,10 @@ Page({
       },
       goodbyeMINA: function() {
         common.sayGoodbye('MINA')
+      },
+      switchPage: function() {
+          wx.switchTab({
+            url: '/pages/demo/demo',
+          })
       }
 })
