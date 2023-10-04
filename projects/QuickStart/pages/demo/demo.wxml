@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+    <map longitude="广州经度" latitude="广州纬度"/>
+</view>

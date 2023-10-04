@@ -1,0 +1,82 @@
+<!-- 一个简单的文本标签 -->
+<text>hello world</text>
+
+<!-- view 中包含了 text 标签 -->
+<view>
+    <text>hello world</text>
+</view>
+<view>
+    <image class="userinfo-avator" src="./image/a.jpg" mode="widthFix"/>
+</view>
+<view>
+    <text>当前时间：{{time}}</text>
+</view>
+<view>
+    <view>三元运算：<text>{{a===10?"变量 a 等于10": "变量 a 不等于10"}}</text></view>
+</view>
+<view>
+算术运算：{{a + b}} + {{c}} + d
+</view>
+<view>
+{{"hello " + name}}
+</view>
+<view>
+<view>{{[1,2,3]}}</view>
+<view>{{"hello world"}}</view>
+<view>{{567}}</view>
+</view>
+<view wx:if="{{condition}}">True</view>
+<view wx:if="{{length<5}}">1</view>
+<view wx:elif="{{length<=10}}">2</view>
+<view wx:else>3</view>
+<block wx:if="condition">
+    <view>group01</view>
+    <view>group02</view>
+    <view>group03</view>
+</block>
+
+<view wx:for="{{array}}" wx:key="message">
+    {{index}},{{item.message}}
+</view>
+<view wx:for="{{array}}" wx:for-item="oneItem" wx:for-index="oneIndex" wx:key="message">
+    {{oneIndex}}, {{oneItem.message}}
+</view>
+
+<view>
+<switch wx:for="{{objectArray}}" wx:key="unique">{{item.id}}</switch>
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFont"> Add to the front </button>
+</view>
+<view>
+<switch wx:for="{{numberArray}}" wx:key="*this">{{item}}</switch>
+<button bindtap="addNumberToFont">Add Number to front</button>
+</view>
+
+<template name="msgItem">
+    <view>
+        <text> {{index}}: {{msg}} </text>
+        <text> Time: {{time}} </text>
+    </view>
+</template>
+
+<template is="msgItem" data="{{...item}}"/>
+
+<template name="odd">
+  <view> odd </view>
+</template>
+
+
+<template name="even">
+  <view> even </view>
+</template>
+
+<block wx:for="{{[1,2,3,4,5]}}">
+    <template is="{{item % 2 ==0? 'even': 'odd'}}"/>
+</block>
+
+<import src="item.wxml"/>
+<template is="item" data="{{text: 'forbar'}}"/>
+
+<include src="header.wxml"></include>
+<view>body</view>
+<include src="footer.wxml"></include>
