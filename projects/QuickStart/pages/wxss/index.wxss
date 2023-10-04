@@ -1,0 +1,34 @@
+@import "/weui/dist/style/weui.wxss";
+@import "/mod/test_0.wxss";
+@import "/mod/test_1.wxss";
+
+/* pages/wxss/index.wxss */
+/* @import url("./test_0.css"); */
+/* @import url('test_0.css'); */
+/* @import "./test_1.wxss" */
+
+
+
+/* 权重为 1 */
+view{ 
+    color: blue
+}
+  
+  /* 权重为 10 */
+  .ele{
+    color: red
+  }
+  /* 权重为 100 */
+  #ele{ 
+    color: pink
+  }
+  
+  /* 权重为 1 + 100 = 101，优先级最高，元素颜色为orange */
+  view#ele{
+    color: orange
+  }
+  
+  /* 权重为 1 + 10 = 11 */
+  view.ele{
+    color: green
+  }

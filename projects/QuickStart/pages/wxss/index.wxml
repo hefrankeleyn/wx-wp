@@ -1,0 +1,9 @@
+<view style="color: red; font-size: 48rpx">内联样式</view>
+<view style="color: {{eleColor}}; font-size: {{eleFontSize}}">动态更新内联样式</view>
+
+<view id="ele" class="ele" style="width: 200rpx; height: 10px;">选择器优先级</view>
+
+<view data-weui-theme="dark">
+微信官方样式
+</view>
+<view class="weui-btn weui-btn_primary" aria-role="button" url="javascript:">主要操作</view>
