@@ -1,0 +1,8 @@
+<view id="outer" bind:touchstart="handleTap1" capture-bind:touchstart="handleTap2">bind outer view
+    <view id="inner" bind:touchstart="handleTap3" capture-bind:touchstart="handleTap4">bind inner view</view>
+</view>
+
+<view id="outer" bind:touchstart="handleTap1" capture-bind:touchstart="handleTap2">capture-catch将中断捕获阶段和取消冒泡阶段)
+    <view id="inner" catch:touchstart="handleTap3" capture-bind:touchstart="handleTap4">bind inner view</view>
+</view>
+<button bind:tap="showInfo">Show Info</button>

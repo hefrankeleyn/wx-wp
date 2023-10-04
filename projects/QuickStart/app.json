@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/event/index",
     "pages/demojs/index",
     "pages/wxss/index",
     "pages/wxml/index",
