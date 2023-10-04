@@ -1,5 +1,7 @@
 // app.js
+console.log("app.js ...");
 App({
+    oneGlobalValue: 1,
   onLaunch() {
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []

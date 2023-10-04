@@ -1,4 +1,5 @@
 // pages/wxml/index.js
+console.log("wxml/index.js ...");
 Page({
 
     /**

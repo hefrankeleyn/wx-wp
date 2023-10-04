@@ -1,4 +1,5 @@
 // pages/wxss/index.js
+console.log("wxss/index.js ...");
 Page({
 
     /**

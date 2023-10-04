@@ -1,0 +1,2 @@
+/* pages/demojs/index.wxss */
+@import "/weui/dist/style/weui.wxss";

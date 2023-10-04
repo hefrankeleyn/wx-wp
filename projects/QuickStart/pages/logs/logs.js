@@ -1,4 +1,5 @@
 // logs.js
+console.log("logs/logs.js ...");
 const util = require('../../utils/util.js')
 
 Page({
