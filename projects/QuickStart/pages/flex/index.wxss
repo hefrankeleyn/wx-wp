@@ -1,0 +1,12 @@
+/* pages/flex/index.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.shrink-parent-container {
+    display: flex;
+    width: 400px;
+    background-color: gray;
+}
