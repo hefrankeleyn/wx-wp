@@ -1,0 +1,4 @@
+/* pages/hover/index.wxss */
+.hover {
+    background-color: gray;
+}

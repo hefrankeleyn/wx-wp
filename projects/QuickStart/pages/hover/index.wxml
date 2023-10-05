@@ -1,0 +1,7 @@
+<!--pages/hover/index.wxml-->
+<button hover-class="hover">点击button</button>
+<view hover-class="hover">点击view</view>
+<button loading="{{loading}}" bind:tap="clickLoadingButton">出现loading的操作{{loading}}</button>
+<button bind:tap="showToastWithSuccessOption">操作成功的Toast提示</button>
+<button bind:tap="showModalByError">显示模态对话框</button>
+<view style="width: 500rpx; height: 2000rpx; background-color: gray;">滚动</view>

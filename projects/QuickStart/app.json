@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/hover/index",
     "pages/flex/index",
     "pages/event/index",
     "pages/demojs/index",
