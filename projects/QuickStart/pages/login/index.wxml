@@ -1,0 +1,3 @@
+<!--pages/login/index.wxml-->
+<button bind:tap="fetchLoginCode">获取登陆凭证</button>
+<view>{{loginCode}}</view>
