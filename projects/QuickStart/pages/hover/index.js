@@ -7,6 +7,10 @@ Page({
     data: {
         loading: false
     },
+    showLoading: function() {
+        wx.showLoading();
+        wx.hideLoading();
+    },
     clickLoadingButton: function() {
         console.log("触发了点击操作...");
         this.setData({

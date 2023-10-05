@@ -1,5 +1,5 @@
 <!--pages/hover/index.wxml-->
-<button hover-class="hover">点击button</button>
+<button hover-class="hover" bind:tap="showLoading">点击button</button>
 <view hover-class="hover">点击view</view>
 <button loading="{{loading}}" bind:tap="clickLoadingButton">出现loading的操作{{loading}}</button>
 <button bind:tap="showToastWithSuccessOption">操作成功的Toast提示</button>
