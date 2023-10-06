@@ -1,0 +1,2 @@
+<label><slot></slot></label>
+<input/>

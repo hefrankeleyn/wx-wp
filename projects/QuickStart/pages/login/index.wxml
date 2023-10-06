@@ -1,3 +1,6 @@
 <!--pages/login/index.wxml-->
 <button bind:tap="fetchLoginCode">获取登陆凭证</button>
 <view>{{loginCode}}</view>
+<map latitude="39.92" longtitude="116.46"></map>
+<button bind:tap="drawMyCanvas">myCanvas</button>
+<canvas canvas-id="myCanvas"></canvas>
