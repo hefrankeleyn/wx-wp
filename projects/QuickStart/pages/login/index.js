@@ -5,7 +5,24 @@ Page({
      * 页面的初始数据
      */
     data: {
-        loginCode: ''
+        loginCode: '',
+        myData: {
+            a: 'aa',
+            b: 'bb'
+          }
+    },
+    setDataTestButton: function(){
+        this.setData({
+            "myData": {
+                "a": "这个字符串在WXML中用到了"
+            }
+        })
+        this._myData = {
+            "b": "这个字符串未在WXML中用到，而且它很长…………………………"
+        }
+    },
+    consoleLogMyData: function() {
+        console.log(this.data.myData)
     },
     fetchLoginCode: function() {
         wx.login({

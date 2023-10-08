@@ -1,5 +1,4 @@
 {
     "usingComponents": {
-        "input-with-label": "../comment/input-with-label"
     }
 }

@@ -4,3 +4,6 @@
 <map latitude="39.92" longtitude="116.46"></map>
 <button bind:tap="drawMyCanvas">myCanvas</button>
 <canvas canvas-id="myCanvas"></canvas>
+<button bind:tap="setDataTestButton">设置值</button>
+<view>{{myData.a}}</view>
+<button bind:tap="consoleLogMyData">打印值</button>
