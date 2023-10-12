@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/wxs/index",
     "pages/login/index",
     "pages/hover/index",
     "pages/flex/index",

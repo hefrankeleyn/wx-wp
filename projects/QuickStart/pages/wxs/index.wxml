@@ -1,0 +1,29 @@
+<!--pages/wxs/index.wxml-->
+<text>pages/wxs/index.wxml</text>
+
+<!-- 示例一 -->
+<wxs src="../comm.wxs" module="tools"></wxs>
+<view>{{tools.msg}}</view>
+<view>{{tools.bar(tools.FOO)}}</view>
+
+<!-- 示例二 -->
+<wxs src="../logic.wxs" module="logic"></wxs>
+<!-- 示例三 -->
+<wxs module="foo">
+    var some_msg = "hello world"
+    var a = 10, b = 20;
+    console.log(a === +a)
+    console.log((0-a) === -a)
+    console.log(~a)
+    // 0001
+    console.log(!1)
+    console.log(!a)
+    console.log(true === a)
+    console.log(true === delete a.fs)
+    console.log('number' === typeof a)
+    console.log(20 === (a, b))
+    module.exports = {
+        msg: some_msg
+    }
+</wxs>
+<view>{{foo.msg}}</view>
