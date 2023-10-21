@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/componentarea/index",
+    "pages/myevent/index",
     "pages/wxs/index",
     "pages/login/index",
     "pages/hover/index",

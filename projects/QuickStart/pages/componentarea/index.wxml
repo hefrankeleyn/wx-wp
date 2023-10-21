@@ -1,0 +1,6 @@
+<!--pages/componentarea/index.wxml-->
+<text>pages/componentarea/index.wxml</text>
+
+<movable-area>
+    <movable-view></movable-view>
+</movable-area>

@@ -1,0 +1,5 @@
+<!--pages/myevent/index.wxml-->
+<text>pages/myevent/index.wxml</text>
+<view mark:myMark="last" bindtap="bindViewTap">
+  <button mark:anotherMark="leaf" bindtap="bindButtonTap">按钮</button>
+</view>
