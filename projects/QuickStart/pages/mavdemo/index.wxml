@@ -1,0 +1,24 @@
+<!--pages/mavdemo/index.wxml-->
+<text>pages/mavdemo/index.wxml</text>
+
+<view class="page-section-title">左侧删除1</view>
+
+<movable-area class="ma01">
+  <movable-view class="mv01" direction="horizontal">
+    <view class="left">左侧插入的内容！</view>
+    <view class="right">
+      <view class="read">已读</view>
+      <view class="delete">删除</view>
+    </view>
+  </movable-view>
+</movable-area>
+
+<movable-area class="ma02" style="height:100rpx;width:750rpx;">
+    <movable-view class="mv02" style="height:100rpx; width: 1050rpx;display: flex; overflow: hidden; " direction="horizontal">
+        <view class="left02" style="line-height: 100rpx;height:100rpx; width:750rpx;background-color: goldenrod; text-align: center;">左边的数据</view>
+        <view class="right02" style="width: 300rpx; height: 100rpx;line-height: 100rpx; display: flex;">
+            <view class="console" style="height: 100rpx;width:150rpx; background-color: gray; text-align: center;">取消</view>
+            <view class="success" style="height: 100rpx; width: 150rpx; background-color:green;text-align: center;">确定</view>
+        </view>
+    </movable-view>
+</movable-area>

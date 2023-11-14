@@ -1,0 +1,92 @@
+/* pages/movableareaview/index.wxss */
+
+movable-area {
+    margin: 10rpx;
+}
+
+
+.a1 {
+    width: 500rpx;
+    height: 500rpx;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.v1 {
+    width: 100rpx;
+    height: 100rpx;
+    background-color: green;
+}
+
+
+.a2 {
+    width: 500rpx;
+    height: 500rpx;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.v2 {
+    width: 500rpx;
+    height: 500rpx;
+    background-color: green;
+}
+
+
+.a3 {
+    width: 300rpx;
+    height: 300rpx;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.v3 {
+    width: 500rpx;
+    height: 500rpx;
+    background-color: green;
+}
+
+.ma1 {
+    width: 750rpx;
+    height: 100rpx;
+    background-color: gray;
+    overflow: hidden;
+}
+
+.mv1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1050rpx;
+    height: 100rpx;
+    background-color: green;
+}
+
+.left {
+    width: 750rpx;
+    height: 100rpx;
+    background-color: white;
+    line-height: 100rpx;
+    padding-left: 30rpx;
+    display: flex;
+    flex-direction: row;
+    color: gray;
+}
+
+.right {
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    line-height: 100rpx;
+}
+.read {
+    background-color: #ccc;
+    color: #fff;
+    width: 150rpx;
+  }
+  .delete {
+    background-color: red;
+    color: #fff;
+    width: 150rpx; 
+  }

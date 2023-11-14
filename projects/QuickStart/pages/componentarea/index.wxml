@@ -1,6 +1,17 @@
 <!--pages/componentarea/index.wxml-->
 <text>pages/componentarea/index.wxml</text>
 
+<view class="container">
+    <view class="page-body">
+        <view class="page-section">
+            <view class="page-section-title first">movable-view区域小于movable-area</view>
+            <movable-area>
+                <movable-view x="{{x}}" y="{{y}}" direction="all">text</movable-view>
+            </movable-area>
+        </view>
+    </view>
+</view>
+
 <movable-area>
-    <movable-view></movable-view>
-</movable-area>
+                <movable-view direction="all">text</movable-view>
+            </movable-area>

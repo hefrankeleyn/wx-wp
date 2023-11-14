@@ -135,5 +135,151 @@ CSS（层叠样式表）中的定位是一种用于控制元素在网页上的�
 1. 随着页面滚动，`.sticky-title` 也随着滚动，直到距离顶部100px的时候，变成固定定位；
 2. 当一个`.container`滚出浏览器窗口，`.sticky-title` 再次变为相对定位，随着`.sticky-title`一起消失；
 
+## 三、三种拖拽情况
+
+movable-area和movable-view 默认宽高· 10rpx。
+
+可以移动的范围是可以计算出来的，单位为RPX。
+
+### （1）第一种情况：两者大小相等，无法移动
+
+```
+<movable-area class="a2">
+    <movable-view bindchange="onChange" x="{{x2}}" y = "{{y2}}" direction="all" class="v2">Text</movable-view>
+</movable-area>
+```
+
+```
+
+.a2 {
+    width: 500rpx;
+    height: 500rpx;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.v2 {
+    width: 500rpx;
+    height: 500rpx;
+    background-color: green;
+}
+
+```
+
+### （2）第二种情况： movable-view  小于movable-area
+
+```
+<movable-area>
+    <movable-view direction="all">Text</movable-view>
+</movable-area>
+```
+
+```
+movable-area {
+    width: 500rpx;
+    height: 500rpx;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+movable-view {
+    width: 100rpx;
+    height: 100rpx;
+    background-color: green;
+}
+```
+
+### （3）第三种情况： movable-view  大于movable-area
+
+```
+<movable-area class="a3">
+    <movable-view bindchange="onChange" x="{{x3}}" y = "{{y3}}" direction="all" class="v3">Text</movable-view>
+</movable-area>
+```
+
+```
+
+.a3 {
+    width: 300rpx;
+    height: 300rpx;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.v3 {
+    width: 500rpx;
+    height: 500rpx;
+    background-color: green;
+}
+
+```
+
+## 四、如何实现动画
+
+水平移动：
+
+```html
+<movable-area class="a1">
+    <movable-view bindchange="onChange" x="{{x1}}" y = "{{y1}}" direction="horizontal" class="v1" out-of-bounds>水平</movable-view>
+</movable-area>
+```
+
+垂直移动：
+
+```html
+<movable-area class="a1">
+    <movable-view bindchange="onChange" x="{{x1}}" y = "{{y1}}" direction="vertical" class="v1" out-of-bounds>垂直</movable-view>
+</movable-area>
+```
+
+放缩：
+
+```
+<movable-area class="a1">
+    <movable-view bindchange="onChange" x="{{x1}}" y = "{{y1}}" direction="vertical" class="v1" scale="{{true}}" scale-min="{{0.1}}" scale-max="{{5}}" scale-value="{{scale}}">垂直</movable-view>
+</movable-area>
+```
+
+## 五、自定义实现一个左滑删除的效果
+
+1. 将 Mobile area 设置为“等屏宽”，将子容器 Mobile view 的宽度设置为“屏宽+左滑按钮宽度的和”。
+2. 左边主要内容与右边的操作按钮都是作为 Mobile view 的子元素存在的；
+3. 将 Mobile view 的 direction 属性设置为horizontal，这个值限定我们只能在水平方向上进行移动；
+
+```
+<movable-area class="ma02" style="height:100rpx;width:750rpx;">
+    <movable-view class="mv02" style="height:100rpx; width: 1050rpx;display: flex; overflow: hidden; " direction="horizontal">
+        <view class="left02" style="line-height: 100rpx;height:100rpx; width:750rpx;background-color: goldenrod; text-align: center;">左边的数据</view>
+        <view class="right02" style="width: 300rpx; height: 100rpx;line-height: 100rpx; display: flex;">
+            <view class="console" style="height: 100rpx;width:150rpx; background-color: gray; text-align: center;">取消</view>
+            <view class="success" style="height: 100rpx; width: 150rpx; background-color:green;text-align: center;">确定</view>
+        </view>
+    </movable-view>
+</movable-area>
+```
+
+
+
+## 六、补充内存
+
+### （1）`overflow:hidden`的作用
+
+在 CSS 中，`overflow` 属性用于指定当内容溢出其包含元素的框时应该发生什么。`overflow: hidden;` 是该属性的一个值，它的作用是：
+
+- **隐藏溢出内容**：当元素的内容超出其指定的宽度和高度时，超出部分的内容将不会显示，也不会引起滚动条的出现。
+- **清除浮动**：在一些情况下，可以使用 `overflow: hidden;` 来清除子元素的浮动，这是因为它创建了一个块级格式化上下文（Block Formatting Context, BFC）。
+
+例如，如果有一个容器元素，内部有文本或其他元素，当这些内容的总大小超出容器的大小时，`overflow: hidden;` 将确保只显示适合容器的部分，其余部分将被隐藏。这常用于防止布局溢出，特别是当你不确定内容的大小或动态内容时。
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+```
+
+在上述代码中，任何 `div` 元素中超出 100x100 像素的内容都将被隐藏。这有助于维护布局的整洁性和一致性，尤其是在响应式设计和动态内容管理中。
+
 
 

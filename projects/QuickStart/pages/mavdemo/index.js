@@ -1,12 +1,11 @@
-// pages/componentarea/index.js
+// pages/mavdemo/index.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        x: 2,
-        y: 5,
+
     },
 
     /**

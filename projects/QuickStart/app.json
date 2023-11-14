@@ -1,6 +1,8 @@
 {
   "pages":[
-    "pages/componentarea/index",
+      "pages/mavdemo/index",
+      "pages/movableareaview/index",
+      "pages/componentarea/index",
     "pages/myevent/index",
     "pages/wxs/index",
     "pages/login/index",

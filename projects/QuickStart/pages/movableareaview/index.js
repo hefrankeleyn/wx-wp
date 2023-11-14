@@ -1,12 +1,35 @@
-// pages/componentarea/index.js
+// pages/movableareaview/index.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        x: 2,
-        y: 5,
+        x1: 0,
+        y1: 0,
+        x2: 0,
+        y2: 0,
+        x3: 0,
+        y3: 0,
+        scale: 2,
+    },
+
+    tap2(e) {
+        let kind =  parseInt(e.currentTarget.dataset.kind)
+        if (!kind){
+          this.setData({
+            scale: 3
+          })
+        }else{
+          this.setData({
+            scale: 0
+          })
+        }
+        
+      },
+
+    onChange(e) {
+        console.log(e.detail)
     },
 
     /**
