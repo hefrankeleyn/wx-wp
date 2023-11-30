@@ -22,3 +22,12 @@
         </view>
     </movable-view>
 </movable-area>
+
+<view>左滑删除</view>
+<slide-view class="slide" width="750" height="100" slideWidth="300">
+<view class="left" slot="left">左边的内容</view>
+<view class="right" slot="right">
+    <view class="read">已读</view>
+    <view class="delete">删除</view>
+</view>
+</slide-view>
